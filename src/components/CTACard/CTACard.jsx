@@ -18,9 +18,9 @@ const CTACard = () => {
           <div className="cta-col">
             <Copy animateOnScroll={true}>
               <p className="lg">
-                Currently looking for internship opportunities to apply my
-                skills in full-stack development and DSA to solve real-world
-                problems.
+                Supporting businesses that need reliable transport
+                coordination, consistent fleet availability, and responsive
+                logistics across Odisha.
               </p>
             </Copy>
 
@@ -30,7 +30,7 @@ const CTACard = () => {
               variant="dark"
               href="/contact"
             >
-              Get in Touch
+              Discuss Your Requirement
             </Button>
           </div>
         </div>
@@ -39,22 +39,23 @@ const CTACard = () => {
           <div className="cta-card-copy">
             <div className="cta-card-col">
               <Copy animateOnScroll={true}>
-                <h3>Technical Philosophy</h3>
+                <h3>Operating Philosophy</h3>
               </Copy>
             </div>
 
             <div className="cta-card-col">
               <Copy animateOnScroll={true}>
                 <p>
-                  I believe in writing clean, efficient code that is both
-                  scalable and secure. Every project is an opportunity to
-                  optimize performance and enhance user experience.
+                  We believe transport service should feel predictable,
+                  transparent, and well coordinated. Every movement is planned
+                  around timing, safe handling, and practical client
+                  communication.
                 </p>
 
                 <p>
-                  From designing robust MongoDB schemas to implementing secure
-                  OAuth flows, I strive for technical excellence in every line
-                  of code I ship.
+                  From route planning and fleet readiness to dispatch
+                  follow-through, our focus stays on dependable execution that
+                  helps businesses move goods with less friction.
                 </p>
               </Copy>
 
@@ -65,7 +66,7 @@ const CTACard = () => {
                 icon={MdArticle}
                 href="/studio"
               >
-                About My Process
+                See How We Work
               </Button>
             </div>
           </div>

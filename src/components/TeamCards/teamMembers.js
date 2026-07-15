@@ -1,42 +1,42 @@
 export const teamMembers = [
   {
     id: "card-1",
-    name: "Hyba Transport",
+    name: "Hyba Movement",
     img: "/team-cards/team-member-1.jpg",
-    alt: "Hyba Transport",
+    alt: "Hyba Movement",
     description:
-      "Specialized heavy-duty transport services with a focus on efficiency and safety in industrial logistics.",
+      "Focused transport support for hyba movement, planned with reliability, safe handling, and steady operational coordination.",
   },
   {
     id: "card-2",
-    name: "Deeper Transport",
+    name: "Long-Route Dispatch",
     img: "/team-cards/team-member-2.jpg",
-    alt: "Deeper Transport",
+    alt: "Long-Route Dispatch",
     description:
-      "Comprehensive logistics solutions across Odisha, handling complex transport requirements with precision.",
+      "Deeper-route logistics managed with practical planning and responsive execution for businesses that move across wider distances.",
   },
   {
     id: "card-3",
-    name: "Regional Logistics",
+    name: "Regional Coverage",
     img: "/team-cards/team-member-3.jpg",
-    alt: "Regional Logistics",
+    alt: "Regional Coverage",
     description:
-      "Dedicated service coverage in the Odisha region, ensuring your cargo reaches its destination on time, every time.",
+      "Dedicated Odisha coverage that helps clients move goods with dependable timing, clear coordination, and local route familiarity.",
   },
   {
     id: "card-4",
-    name: "Fleet Reliability",
+    name: "Fleet Readiness",
     img: "/team-cards/team-member-4.jpg",
-    alt: "Fleet Reliability",
+    alt: "Fleet Readiness",
     description:
-      "Maintaining a modern and robust fleet to provide consistent and dependable transport services for our partners.",
+      "Operational readiness across vehicles and scheduling so transport commitments remain consistent, practical, and easier to trust.",
   },
   {
     id: "card-5",
-    name: "Safety First",
+    name: "Safety-Led Service",
     img: "/team-cards/team-member-5.jpg",
-    alt: "Safety First",
+    alt: "Safety-Led Service",
     description:
-      "Adhering to the highest safety standards in transport operations to protect your valuable assets during transit.",
+      "A service approach rooted in responsible movement, careful handling, and delivery discipline that protects cargo in transit.",
   },
 ];

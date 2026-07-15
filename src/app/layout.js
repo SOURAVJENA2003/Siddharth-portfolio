@@ -5,7 +5,8 @@ import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata = {
   title: "Siddharth Transport | Reliable Logistics & Hyba Services in Odisha",
-  description: "Computer Science student specializing in building scalable systems with precision and logic. Explore projects in full-stack development, DSA, and secure applications.",
+  description:
+    "Siddharth Transport delivers reliable hyba services, regional logistics, and fleet-backed transport solutions across Odisha with a focus on safe, timely movement.",
   icons: {
     icon: "/site-logo.png",
     shortcut: "/site-logo.png",

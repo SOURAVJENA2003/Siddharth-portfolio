@@ -503,7 +503,7 @@ const Menu = ({ pageRef }) => {
 
             <div className="menu-content-group">
               <p>Edition</p>
-              <p>Corporate Vol. 01</p>
+              <p>Logistics Vol. 01</p>
             </div>
 
             <div className="menu-content-group">
@@ -512,8 +512,9 @@ const Menu = ({ pageRef }) => {
             </div>
 
             <div className="menu-content-group">
-              <p>Phone</p>
-              <p>+91 XXXXXXXXXX</p>
+              <p>Coverage</p>
+              <p>Hyba Movement</p>
+              <p>Regional Logistics</p>
             </div>
           </div>
           <div
@@ -523,26 +524,22 @@ const Menu = ({ pageRef }) => {
             }}
           >
             <div className="menu-content-group">
-              <p>Field Log</p>
-
-              <a href="https://github.com/SOURAVJENA2003" target="_blank">
-                GitHub
-              </a>
-
-              <a href="https://www.linkedin.com/in/sourav-jena-44b368373" target="_blank">
-                LinkedIn
-              </a>
+              <p>Operations</p>
+              <p>Route Planning</p>
+              <p>Fleet Readiness</p>
+              <p>Safe Delivery</p>
             </div>
 
             <div className="menu-content-group">
-              <p>Language</p>
-              <p>Human / Code</p>
+              <p>Approach</p>
+              <p>Reliable</p>
+              <p>Responsive</p>
             </div>
 
             <div className="menu-content-group">
               <p>Credits</p>
-              <p>Made by Sourav Jena</p>
-              <p>MWT. MAY2026</p>
+              <p>Client Website</p>
+              <p>Edition 2026</p>
             </div>
           </div>
         </div>

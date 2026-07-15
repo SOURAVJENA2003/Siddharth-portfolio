@@ -199,7 +199,7 @@ export default function TeamCards() {
       {/* desktop animated section */}
       <section className="sticky team-desktop" ref={stickyRef}>
         <div className="sticky-header" ref={headerRef}>
-          <h1>Minds at Work</h1>
+          <h1>What Drives Us</h1>
         </div>
         {teamMembers.map((m, idx) => (
           <div
@@ -226,7 +226,7 @@ export default function TeamCards() {
       {/* mobile static section */}
       <section className="team-mobile">
         <div className="mobile-header">
-          <h1>Minds at Work</h1>
+          <h1>What Drives Us</h1>
         </div>
         {teamMembers.map((m) => (
           <div className="card" id={m.id} key={`m-${m.id}`}>

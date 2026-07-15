@@ -9,7 +9,7 @@ const Page = () => {
       <div className="contact-copy">
         <div className="contact-col">
           <Copy delay={0.8}>
-            <h2>Things in motion stay interesting</h2>
+            <h2>Let's move your next shipment with confidence</h2>
           </Copy>
         </div>
 
@@ -17,8 +17,8 @@ const Page = () => {
           <div className="contact-group">
             <Copy delay={0.8}>
               <p className="sm">Focus</p>
-              <p>Hyba Services</p>
-              <p>Deeper Transport</p>
+              <p>Hyba Transport</p>
+              <p>Deeper Route Movement</p>
               <p>Regional Logistics</p>
             </Copy>
           </div>
@@ -31,7 +31,7 @@ const Page = () => {
           </div>
 
           <div className="contact-mail">
-            <Button delay={1.3} href="mailto:info@siddharthtransport.com" target="_blank">
+            <Button delay={1.3} href="mailto:info@siddharthtransport.com">
               info@siddharthtransport.com
             </Button>
           </div>
@@ -49,42 +49,30 @@ const Page = () => {
       <div className="contact-footer">
         <div className="container">
           <Copy delay={1.6} animateOnScroll={false}>
-            <p className="sm">Code & Logic</p>
+            <p className="sm">Business Enquiries</p>
           </Copy>
 
           <div className="contact-socials">
             <Copy delay={1.7} animateOnScroll={false}>
-              <a
-                className="sm"
-                href="https://github.com/SOURAVJENA2003"
-                target="_blank"
-              >
-                GitHub
+              <a className="sm" href="mailto:info@siddharthtransport.com">
+                Email
               </a>
             </Copy>
 
             <Copy delay={1.8} animateOnScroll={false}>
-              <a
-                className="sm"
-                href="https://www.linkedin.com/in/sourav-jena-44b368373/"
-                target="_blank"
-              >
-                LinkedIn
+              <a className="sm" href="/studio">
+                Studio
               </a>
             </Copy>
 
             <Copy delay={1.9} animateOnScroll={false}>
-              <a
-                className="sm"
-                href="https://codolio.com/profile/SOURAV_JENA"
-                target="_blank"
-              >
-                Codolio
+              <a className="sm" href="/">
+                Home
               </a>
             </Copy>
           </div>
           <Copy delay={2} animateOnScroll={false}>
-            <p className="sm">&copy; Sourav Jena</p>
+            <p className="sm">&copy; Siddharth Transport</p>
           </Copy>
         </div>
       </div>

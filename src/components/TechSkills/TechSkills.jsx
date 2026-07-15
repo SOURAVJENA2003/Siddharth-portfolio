@@ -10,20 +10,48 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const skillsData = [
   {
-    category: "Frontend",
-    skills: ["React.js", "Next.js", "JavaScript (ES6+)", "GSAP", "Tailwind CSS", "HTML5/CSS3"],
+    category: "Transport Solutions",
+    skills: [
+      "Hyba Transport",
+      "Deeper Route Movement",
+      "Regional Logistics",
+      "Industrial Dispatch",
+      "Bulk Load Support",
+      "Scheduled Delivery Runs",
+    ],
   },
   {
-    category: "Backend",
-    skills: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "REST APIs", "RazorPay Integration"],
+    category: "Operational Focus",
+    skills: [
+      "Route Planning",
+      "Fleet Coordination",
+      "Loading Supervision",
+      "Dispatch Management",
+      "Delivery Tracking",
+      "Client Communication",
+    ],
   },
   {
-    category: "Languages",
-    skills: ["JavaScript", "Java", "Python", "C", "TypeScript"],
+    category: "Coverage & Support",
+    skills: [
+      "Odisha Coverage",
+      "Regional Networks",
+      "Flexible Scheduling",
+      "Business Dispatch Support",
+      "Recurring Movement Planning",
+      "On-Time Coordination",
+    ],
   },
   {
-    category: "Tools & Others",
-    skills: ["Git / GitHub", "VS Code", "Postman", "Docker"],
+    category: "Business Values",
+    skills: [
+      "Reliability",
+      "Safety",
+      "Accountability",
+      "Responsive Service",
+      "Cost Awareness",
+      "Long-Term Partnerships",
+    ],
   },
 ];
 
@@ -60,7 +88,7 @@ const TechSkills = () => {
       <div className="container">
         <div className="tech-skills-header">
           <Copy animateOnScroll={true}>
-            <h1>Technical Expertise</h1>
+            <h1>Service Strengths</h1>
           </Copy>
         </div>
 

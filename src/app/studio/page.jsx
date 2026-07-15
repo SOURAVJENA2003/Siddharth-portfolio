@@ -32,13 +32,13 @@ const Page = () => {
         <div className="container">
           <div className="studio-header-row">
             <Copy delay={0.8}>
-              <h1>Seamless Logistics</h1>
+              <h1>Built for Movement</h1>
             </Copy>
           </div>
 
           <div className="studio-header-row">
             <Copy delay={0.95}>
-              <h1>Reliable Transport</h1>
+              <h1>Driven by Reliability</h1>
             </Copy>
           </div>
         </div>
@@ -52,19 +52,18 @@ const Page = () => {
 
           <Copy animateOnScroll={true}>
             <p className="lg">
-              Siddharth Transport is a premier logistics provider based in
-              Odisha, specialized in hyba and deeper transport services. We
-              focus on delivering efficient, secure, and robust transportation
-              solutions for businesses across the region, ensuring timely
-              deliveries and fleet reliability.
+              Siddharth Transport is an Odisha-based transport partner focused
+              on hyba movement, deeper-route operations, and dependable
+              regional logistics. We work with businesses that need practical
+              coordination, careful handling, and consistent delivery
+              performance.
             </p>
 
             <p className="lg">
-              With a strong commitment to operational excellence, we manage a
-              diverse fleet capable of handling complex transport requirements.
-              Our expertise bridges the gap between logistical challenges and
-              seamless execution, creating transport solutions that are both
-              dependable and cost-effective for our clients.
+              Our approach is grounded in route discipline, fleet readiness,
+              and responsive communication. Whether the requirement is recurring
+              movement or one-off dispatch support, we aim to deliver transport
+              solutions that are safe, timely, and built for long-term trust.
             </p>
           </Copy>
         </div>

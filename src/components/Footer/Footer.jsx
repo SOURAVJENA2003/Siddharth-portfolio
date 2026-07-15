@@ -1,6 +1,5 @@
 "use client";
 import "./Footer.css";
-import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 import { IoMail } from "react-icons/io5";
 import Copy from "../Copy/Copy";
@@ -35,7 +34,7 @@ const Footer = () => {
         <div className="footer-header-content">
           <div className="footer-header">
             <Copy animateOnScroll={true} delay={0.2}>
-              <h1>Let's build something that feels alive</h1>
+              <h1>Ready for dependable transport support?</h1>
             </Copy>
           </div>
           <div className="footer-link">
@@ -46,14 +45,14 @@ const Footer = () => {
               icon={IoMail}
               href="/contact"
             >
-              Say Hello
+              Start an Enquiry
             </Button>
           </div>
         </div>
         <div className="footer-byline">
           <div className="footer-time">
             <p>
-              Odisha
+              Odisha, India
             </p>
           </div>
 

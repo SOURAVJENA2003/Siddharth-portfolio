@@ -12,7 +12,6 @@ import Preloader, { isInitialLoad } from "@/components/Preloader/Preloader";
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,40 +42,40 @@ const Page = () => {
                   <h1>Siddharth Transport</h1>
                 </Copy>
                 <Copy animateOnScroll={false} delay={isInitialLoad ? 6.05 : 1.15}>
-                  <h2>Reliable Transport & Logistics</h2>
+                  <h2>Reliable Hyba, Deeper & Regional Logistics</h2>
                 </Copy>
               </div>
 
-              <div className="hero-cta">
+              {/* <div className="hero-cta">
                 <Button delay={isInitialLoad ? 6.35 : 1.55} href="/studio">
-                  About Siddharth
+                  Explore Services
                 </Button>
-              </div>
+              </div> */}
             </div>
 
             <div className="hero-right">
               <div className="hero-image-container" style={{ animationDelay: `${isInitialLoad ? 6.35 : 1.55}s` }}>
-                <img src="/spiderman.jpg" alt="Siddharth Transport" />
+                <img src="/profile.jpg" alt="Siddharth Transport" />
               </div>
               <div className="hero-description">
                 <Copy animateOnScroll={false} delay={isInitialLoad ? 6.35 : 1.65}>
                   <p className="lg">
-                    <span>HYBA SERVICES</span>
-                    <span>LOGISTICS</span>
-                    <span>ODISHA TRANSPORT</span>
+                    <span>HYBA TRANSPORT</span>
+                    <span>FLEET MOVEMENT</span>
+                    <span>ODISHA LOGISTICS</span>
                   </p>
                 </Copy>
               </div>
             </div>
 
-            <div className="hero-footer-outer">
+            {/* <div className="hero-footer-outer">
               <Copy animateOnScroll={false} delay={isInitialLoad ? 6.65 : 1.85}>
                 <div className="hero-footer-copy">
                   <p className="sm">&copy; Siddharth Transport</p>
                   <p className="sm">( Odisha )</p>
                 </div>
               </Copy>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -92,7 +91,7 @@ const Page = () => {
           <div className="featured-work-header-content">
             <div className="featured-work-header">
               <Copy animateOnScroll={true} delay={0.25}>
-                <h1>Projects</h1>
+                <h1>Operations</h1>
               </Copy>
             </div>
 
@@ -124,9 +123,9 @@ const Page = () => {
             <div className="featured-work-header-copy">
               <Copy animateOnScroll={true} delay={0.25}>
                 <p className="lg">
-                  A collection of projects ranging from full-stack creator
-                  platforms to secure password managers and algorithmic
-                  optimizations.
+                  A snapshot of how Siddharth Transport supports industrial
+                  movement, regional dispatch, fleet readiness, and dependable
+                  delivery across Odisha.
                 </p>
               </Copy>
             </div>
@@ -176,7 +175,9 @@ const Page = () => {
             <div className="services-header-copy">
               <Copy animateOnScroll={true} delay={0.25}>
                 <p className="lg">
-                  I help turn ideas into polished digital products through full-stack development, secure backend systems, optimization, and problem-solving support.
+                  Transport support built around dependable routing,
+                  coordinated fleets, safe handling, and long-term client
+                  service for regional and industrial movement.
                 </p>
               </Copy>
             </div>

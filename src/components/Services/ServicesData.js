@@ -1,32 +1,32 @@
 export const servicesData = [
   {
-    title: "Full-Stack Web Development",
+    title: "Hyba Transport Services",
     description:
-      "I build complete web applications from frontend interfaces to backend systems, focusing on clean UX, scalable architecture, and dependable performance.",
+      "Reliable hyba transport support for businesses that need consistent movement, careful handling, and steady coordination across scheduled routes.",
   },
   {
-    title: "Backend APIs & Database Design",
+    title: "Long-Route & Deeper Movement",
     description:
-      "I create secure APIs, authentication flows, and database structures that keep applications fast, organized, and ready to grow with real usage.",
+      "Efficient deeper-route operations designed for longer-distance movement, with planning that balances timeliness, load security, and route discipline.",
   },
   {
-    title: "Authentication & Security",
+    title: "Industrial & Bulk Dispatch",
     description:
-      "I implement secure login systems, protected routes, and payment verification workflows so products are safer for both users and business logic.",
+      "Practical transport solutions for industrial materials and bulk requirements, backed by dependable scheduling and responsive on-ground execution.",
   },
   {
-    title: "DSA & Problem Solving",
+    title: "Fleet Planning & Availability",
     description:
-      "I use strong data structures and algorithmic thinking to solve logic-heavy problems, improve efficiency, and handle complex engineering challenges.",
+      "Fleet readiness built around dispatch timing, vehicle availability, and smoother coordination so clients can plan movement with more confidence.",
   },
   {
-    title: "Performance Optimization",
+    title: "Safety & Delivery Discipline",
     description:
-      "I analyze existing systems, refactor bottlenecks, and improve speed, maintainability, and code quality across both frontend and backend workflows.",
+      "A service mindset centered on secure handling, responsible transport practices, and dependable follow-through from pickup to delivery.",
   },
   {
-    title: "Project Support & Iteration",
+    title: "Client Coordination & Support",
     description:
-      "I help shape ideas into working products, whether that means building from scratch, refining features, fixing issues, or improving the overall architecture.",
+      "Clear communication, flexible planning, and long-term logistics support for clients who need a transport partner rather than a one-time vendor.",
   },
 ];
