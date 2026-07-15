@@ -6,7 +6,6 @@ import { SplitText } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useLenis } from "lenis/react";
 import { useViewTransition } from "@/hooks/useViewTransition";
-import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 
 gsap.registerPlugin(useGSAP, SplitText);
 
@@ -472,7 +471,6 @@ const Menu = ({ pageRef }) => {
         </div>
 
         <div className="nav-controls">
-          <ThemeToggle />
           <div className="nav-toggle" ref={navToggleRef} onClick={toggleMenu}>
             <div className="nav-toggle-wrapper">
               <p ref={openLabelRef} className="open-label">

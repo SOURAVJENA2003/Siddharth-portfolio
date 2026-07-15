@@ -2,7 +2,9 @@
   position: relative;
   width: 100%;
   padding: 8rem 0;
-  background-color: var(--base-100);
+  background:
+    radial-gradient(circle at top, rgba(255, 170, 92, 0.16), transparent 42%),
+    linear-gradient(180deg, #f4ede6 0%, #efe5dc 100%);
   overflow: hidden;
 }
 
@@ -13,6 +15,8 @@
 
 .tech-skills-header h1 {
   font-size: clamp(3rem, 10vw, 6rem);
+  color: #17110f;
+  text-shadow: 0 6px 24px rgba(23, 17, 15, 0.08);
 }
 
 .skills-grid {
@@ -27,12 +31,20 @@
   flex-direction: column;
   gap: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--base-200);
+  border-bottom: 1px solid rgba(96, 54, 26, 0.16);
   min-width: 0;
 }
 
 .skills-category {
   margin-bottom: 0.5rem;
+}
+
+.skills-category p.sm {
+  color: #6b3a19;
+}
+
+.category-index p.sm {
+  color: #a5561d;
 }
 
 .skills-list {
@@ -44,7 +56,9 @@
 }
 
 .skill-item {
-  background-color: var(--base-200);
+  background: linear-gradient(135deg, #ffd8ba 0%, #ffc184 55%, #e8822c 100%);
+  border: 1px solid rgba(132, 67, 25, 0.18);
+  box-shadow: 0 14px 34px rgba(121, 63, 23, 0.12);
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -56,14 +70,51 @@
   font-size: 0.9rem;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--base-500);
+  color: #23150d;
 }
 
 .skill-item:hover {
-  background-color: var(--base-400);
+  background: linear-gradient(135deg, #f39a53 0%, #cb6217 100%);
 }
 
 .skill-item:hover p {
+  color: #fff4ea;
+}
+
+[data-theme="dark"] .tech-skills {
+  background: var(--base-100);
+}
+
+[data-theme="dark"] .tech-skills-header h1 {
+  color: var(--base-400);
+  text-shadow: none;
+}
+
+[data-theme="dark"] .skills-group {
+  border-bottom: 1px solid var(--base-200);
+}
+
+[data-theme="dark"] .skills-category p.sm,
+[data-theme="dark"] .category-index p.sm {
+  color: var(--base-300);
+}
+
+[data-theme="dark"] .skill-item {
+  background-color: var(--base-200);
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .skill-item p {
+  color: var(--base-500);
+}
+
+[data-theme="dark"] .skill-item:hover {
+  background-color: var(--base-400);
+}
+
+[data-theme="dark"] .skill-item:hover p {
   color: var(--base-100);
 }
 

@@ -1,7 +1,6 @@
 import "./globals.css";
 import ClientLayout from "@/client-layout";
 import { ViewTransitions } from "next-view-transitions";
-import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata = {
   title: "Siddharth Transport | Reliable Logistics & Hyba Services in Odisha",
@@ -16,14 +15,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <ThemeProvider>
-        <body>
-          <ViewTransitions>
-            <ClientLayout>{children}</ClientLayout>
-          </ViewTransitions>
-        </body>
-      </ThemeProvider>
+    <html lang="en" data-theme="dark">
+      <body>
+        <ViewTransitions>
+          <ClientLayout>{children}</ClientLayout>
+        </ViewTransitions>
+      </body>
     </html>
   );
 }
