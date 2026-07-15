@@ -1,0 +1,119 @@
+.services-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--base-100);
+}
+
+.services-section .service-card {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.services-section .service-card-container {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  display: flex;
+  padding: 2rem;
+  border-radius: 1rem;
+  will-change: transform;
+}
+
+.services-section #service-card-1 {
+  background-color: var(--base-200);
+}
+
+.services-section #service-card-2 {
+  background-color: var(--base-400);
+  color: var(--base-100);
+}
+
+.services-section #service-card-3 {
+  background-color: var(--accent-1);
+  color: var(--base-100);
+}
+
+.services-section #service-card-4 {
+  background-color: var(--base-200);
+}
+
+.services-section #service-card-5 {
+  background-color: var(--base-500);
+}
+
+.services-section #service-card-6 {
+  background-color: var(--base-400);
+  color: var(--base-100);
+}
+
+.services-section .service-card-content,
+.services-section .service-card-content-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.services-section .service-card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.services-section .service-card-label {
+  letter-spacing: 0.12em;
+  opacity: 0.65;
+  text-transform: uppercase;
+}
+
+.services-section .service-card-title {
+  max-width: 12ch;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.services-section .service-card-description {
+  max-width: 34rem;
+  color: inherit;
+  opacity: 0.78;
+}
+
+@media (max-width: 1000px) {
+  .services-section .service-card {
+    height: auto;
+    min-height: 10svh;
+    padding: 2rem 1.25rem;
+  }
+
+  .services-section .service-card-container {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    padding: 2rem 1.25rem;
+  }
+
+  .services-section .service-card-content-wrapper {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .services-section .service-card-title {
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .services-section .service-card-description {
+    max-width: 100%;
+  }
+}
