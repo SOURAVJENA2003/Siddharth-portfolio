@@ -26,6 +26,10 @@ export default function Button({
   const iconRef = useRef(null);
   const splitRef = useRef(null);
   const lines = useRef([]);
+  const animationRefs = useRef([]);
+  const resizeObserverRef = useRef(null);
+  const resizeTimeoutRef = useRef(null);
+  const lastWidthRef = useRef(0);
 
   const waitForFonts = async () => {
     try {
@@ -55,11 +59,32 @@ export default function Button({
     () => {
       if (!labelRef.current || !buttonRef.current) return;
 
-      const initializeSplitText = async () => {
-        await waitForFonts();
+      const cleanupSplitText = () => {
+        animationRefs.current.forEach((animation) => {
+          if (animation?.scrollTrigger) {
+            animation.scrollTrigger.kill();
+          }
+          animation?.kill?.();
+        });
+        animationRefs.current = [];
+
+        if (splitRef.current) {
+          splitRef.current.revert();
+        }
 
         splitRef.current = null;
         lines.current = [];
+      };
+
+      const initializeSplitText = async () => {
+        await waitForFonts();
+
+        if (!buttonRef.current) return;
+
+        cleanupSplitText();
+        lastWidthRef.current = Math.round(
+          buttonRef.current.getBoundingClientRect().width
+        );
 
         const split = SplitText.create(labelRef.current, {
           type: "lines",
@@ -86,7 +111,7 @@ export default function Button({
         };
 
         if (animateOnScroll) {
-          gsap.to(lines.current, {
+          const linesAnimation = gsap.to(lines.current, {
             ...animationProps,
             scrollTrigger: {
               trigger: labelRef.current,
@@ -94,9 +119,10 @@ export default function Button({
               once: true,
             },
           });
+          animationRefs.current.push(linesAnimation);
 
           if (iconRef.current) {
-            gsap.to(iconRef.current, {
+            const iconAnimation = gsap.to(iconRef.current, {
               scale: 1,
               duration: 0.8,
               ease: "power4.out",
@@ -107,27 +133,63 @@ export default function Button({
                 once: true,
               },
             });
+            animationRefs.current.push(iconAnimation);
           }
         } else {
-          gsap.to(lines.current, animationProps);
+          const linesAnimation = gsap.to(lines.current, animationProps);
+          animationRefs.current.push(linesAnimation);
 
           if (iconRef.current) {
-            gsap.to(iconRef.current, {
+            const iconAnimation = gsap.to(iconRef.current, {
               scale: 1,
               duration: 0.8,
               ease: "power4.out",
               delay: delay,
             });
+            animationRefs.current.push(iconAnimation);
           }
         }
       };
 
       initializeSplitText();
 
-      return () => {
-        if (splitRef.current) {
-          splitRef.current.revert();
+      const handleLayoutChange = () => {
+        if (!buttonRef.current) return;
+
+        const nextWidth = Math.round(
+          buttonRef.current.getBoundingClientRect().width
+        );
+
+        if (nextWidth === lastWidthRef.current) {
+          return;
         }
+
+        if (resizeTimeoutRef.current) {
+          clearTimeout(resizeTimeoutRef.current);
+        }
+
+        resizeTimeoutRef.current = setTimeout(() => {
+          initializeSplitText();
+          ScrollTrigger.refresh();
+        }, 150);
+      };
+
+      if (typeof ResizeObserver !== "undefined") {
+        resizeObserverRef.current = new ResizeObserver(handleLayoutChange);
+        resizeObserverRef.current.observe(buttonRef.current);
+      }
+
+      window.addEventListener("resize", handleLayoutChange, { passive: true });
+      window.addEventListener("orientationchange", handleLayoutChange);
+
+      return () => {
+        if (resizeTimeoutRef.current) {
+          clearTimeout(resizeTimeoutRef.current);
+        }
+        resizeObserverRef.current?.disconnect();
+        window.removeEventListener("resize", handleLayoutChange);
+        window.removeEventListener("orientationchange", handleLayoutChange);
+        cleanupSplitText();
       };
     },
     { scope: buttonRef, dependencies: [animateOnScroll, delay] }

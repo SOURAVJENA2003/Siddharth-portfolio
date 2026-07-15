@@ -1,7 +1,11 @@
 .line {
   position: relative;
+  display: block;
+  max-width: 100%;
   transform: translateY(100%);
   will-change: transform;
   padding-bottom: 0.2em;
   margin-bottom: -0.2em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }

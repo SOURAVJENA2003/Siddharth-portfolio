@@ -1,6 +1,6 @@
 .contact {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100svh;
   display: flex;
   justify-content: center;
@@ -28,6 +28,7 @@
 
 .contact .contact-copy .contact-col:nth-child(1) {
   flex: 3;
+  min-width: 0;
 }
 
 .contact .contact-copy .contact-col:nth-child(2) {
@@ -35,10 +36,23 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-width: 0;
 }
 
 .contact .contact-copy .contact-col h2 {
   width: 85%;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.95;
+}
+
+@media (max-width: 1200px) {
+  .contact .contact-copy {
+    width: 90%;
+  }
+
+  .contact .contact-copy .contact-col h2 {
+    width: 100%;
+  }
 }
 
 .contact .contact-copy p.sm {
@@ -89,6 +103,10 @@
     width: 100%;
   }
 
+  .contact .contact-copy .contact-col:nth-child(2) {
+    gap: 1.75rem;
+  }
+
   .contact .contact-footer {
     position: relative;
     margin-top: 4rem;
@@ -108,5 +126,25 @@
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact .contact-copy {
+    gap: 3rem;
+    padding: 1rem;
+  }
+
+  .contact .contact-copy .contact-col h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .contact .contact-copy .contact-col:nth-child(2) {
+    gap: 1.5rem;
+  }
+
+  .contact .contact-footer .container {
+    gap: 1.25rem;
+    padding: 1rem;
   }
 }

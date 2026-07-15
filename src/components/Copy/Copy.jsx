@@ -13,6 +13,10 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
   const elementRefs = useRef([]);
   const splitRefs = useRef([]);
   const lines = useRef([]);
+  const animationsRef = useRef([]);
+  const resizeObserverRef = useRef(null);
+  const resizeTimeoutRef = useRef(null);
+  const lastWidthRef = useRef(0);
 
   const waitForFonts = async () => {
     try {
@@ -42,12 +46,35 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
     () => {
       if (!containerRef.current) return;
 
-      const initializeSplitText = async () => {
-        await waitForFonts();
+      const cleanupSplitText = () => {
+        animationsRef.current.forEach((animation) => {
+          if (animation?.scrollTrigger) {
+            animation.scrollTrigger.kill();
+          }
+          animation?.kill?.();
+        });
+        animationsRef.current = [];
+
+        splitRefs.current.forEach((split) => {
+          if (split) {
+            split.revert();
+          }
+        });
 
         splitRefs.current = [];
         lines.current = [];
         elementRefs.current = [];
+      };
+
+      const initializeSplitText = async () => {
+        await waitForFonts();
+
+        if (!containerRef.current) return;
+
+        cleanupSplitText();
+        lastWidthRef.current = Math.round(
+          containerRef.current.getBoundingClientRect().width
+        );
 
         let elements = [];
         if (containerRef.current.hasAttribute("data-copy-wrapper")) {
@@ -92,7 +119,7 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
         };
 
         if (animateOnScroll) {
-          gsap.to(lines.current, {
+          const animation = gsap.to(lines.current, {
             ...animationProps,
             scrollTrigger: {
               trigger: containerRef.current,
@@ -100,19 +127,52 @@ export default function Copy({ children, animateOnScroll = true, delay = 0 }) {
               once: true,
             },
           });
+          animationsRef.current.push(animation);
         } else {
-          gsap.to(lines.current, animationProps);
+          const animation = gsap.to(lines.current, animationProps);
+          animationsRef.current.push(animation);
         }
       };
 
       initializeSplitText();
 
+      const handleLayoutChange = () => {
+        if (!containerRef.current) return;
+
+        const nextWidth = Math.round(
+          containerRef.current.getBoundingClientRect().width
+        );
+
+        if (nextWidth === lastWidthRef.current) {
+          return;
+        }
+
+        if (resizeTimeoutRef.current) {
+          clearTimeout(resizeTimeoutRef.current);
+        }
+
+        resizeTimeoutRef.current = setTimeout(() => {
+          initializeSplitText();
+          ScrollTrigger.refresh();
+        }, 150);
+      };
+
+      if (typeof ResizeObserver !== "undefined") {
+        resizeObserverRef.current = new ResizeObserver(handleLayoutChange);
+        resizeObserverRef.current.observe(containerRef.current);
+      }
+
+      window.addEventListener("resize", handleLayoutChange, { passive: true });
+      window.addEventListener("orientationchange", handleLayoutChange);
+
       return () => {
-        splitRefs.current.forEach((split) => {
-          if (split) {
-            split.revert();
-          }
-        });
+        if (resizeTimeoutRef.current) {
+          clearTimeout(resizeTimeoutRef.current);
+        }
+        resizeObserverRef.current?.disconnect();
+        window.removeEventListener("resize", handleLayoutChange);
+        window.removeEventListener("orientationchange", handleLayoutChange);
+        cleanupSplitText();
       };
     },
     { scope: containerRef, dependencies: [animateOnScroll, delay] }

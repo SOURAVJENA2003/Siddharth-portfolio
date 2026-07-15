@@ -2,7 +2,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   padding: 2rem;
   color: var(--base-100);
   display: flex;
@@ -25,6 +25,7 @@ nav .nav-logo img {
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 0;
 }
 
 nav .nav-toggle {
@@ -53,7 +54,7 @@ nav .close-label {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100svh;
   overflow: hidden;
   background-color: var(--base-400);
@@ -256,6 +257,7 @@ nav .close-label {
   .menu-overlay .menu-link a {
     font-size: clamp(3rem, 15vw, 5rem);
     letter-spacing: -0.05rem;
+    line-height: 0.95;
   }
 }
 
@@ -263,13 +265,14 @@ nav .close-label {
   nav {
     padding: 1rem;
   }
-  
+
   nav .nav-logo a {
     width: 4.5rem;
   }
 
   .menu-overlay .menu-links-wrapper {
     bottom: 2rem;
+    gap: 0.75rem;
   }
 }
 

@@ -22,6 +22,17 @@ footer .footer-header-content {
   text-align: center;
   gap: 2rem;
   flex: 1;
+  min-width: 0;
+}
+
+footer .footer-header,
+footer .footer-link {
+  min-width: 0;
+}
+
+footer .footer-header h1 {
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  line-height: 0.95;
 }
 
 footer .footer-byline {
@@ -73,7 +84,7 @@ footer .footer-byline p {
   }
 
   footer .footer-header h1 {
-    font-size: clamp(2.5rem, 12vw, 4rem);
+    font-size: clamp(2.25rem, 11vw, 3.75rem);
     line-height: 1;
   }
 
@@ -92,6 +103,6 @@ footer .footer-byline p {
 
 @media (max-width: 480px) {
   footer .footer-header h1 {
-    font-size: 1.5rem;
+    font-size: clamp(1.8rem, 9vw, 2.4rem);
   }
 }
